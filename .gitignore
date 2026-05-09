@@ -3,7 +3,6 @@ bin/
 obj/
 node_modules/
 
-# Visual Studio
 .vscode/
 *.user
 *.suo
