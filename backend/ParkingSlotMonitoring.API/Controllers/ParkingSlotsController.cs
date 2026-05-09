@@ -146,7 +146,7 @@ public class ParkingSlotsController : ControllerBase
         return Ok("Parking slot deleted successfully");
     }
 
-    [Authorize(Roles = "2")]
+    [Authorize]
     [HttpGet("reservation-history")]
     public IActionResult GetReservationHistory()
     {
