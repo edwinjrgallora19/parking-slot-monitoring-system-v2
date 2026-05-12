@@ -66,7 +66,6 @@ function ParkingGrid({
                     {reservations.some(
                         r =>
                             r.slot_id === slot.slot_id &&
-                            r.user_id === parseInt(getUserIdFromToken()) &&
                             r.status === "Reserved"
                     ) && (
 
@@ -127,11 +126,7 @@ function ParkingGrid({
                     {getRoleFromToken() !== "2" && (
                         <>
 
-                            {slot.status === "Available"
-                                && !reservations.some(
-                                    r =>
-                                        r.user_id === parseInt(getUserIdFromToken())
-                                ) && (
+                            {slot.status === "Available" && (
                                 <button onClick={() => reserve(slot.slot_id)}>
                                     Reserve
                                 </button>
