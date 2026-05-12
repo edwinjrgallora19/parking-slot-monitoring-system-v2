@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="ParkingSlotMonitoring.API/ParkingSlotMonitoring.API.csproj" />
+  <Project Path="ParkingSlotMonitoring.Tests/ParkingSlotMonitoring.Tests.csproj" />
 </Solution>
