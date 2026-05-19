@@ -19,8 +19,11 @@ builder.Services.AddCors(options =>
         {
             policy.WithOrigins(
             "http://localhost:3000",
-            "https://parking-slot-monitoring-system-v2.vercel.app"
+            "https://parking-slot-monitoring-system-v2.vercel.app",
+            "https://parking-slot-monitoring-system-v2-6tkg6ewe2.vercel.app"
         )
+
+
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
@@ -64,7 +67,7 @@ var app = builder.Build();
     app.MapScalarApiReference();  // UI → /scalar/v1
 
 // ================= MIDDLEWARE =================
-//app.UseHttpsRedirection();git add .
+//app.UseHttpsRedirection();
 app.UseCors("AllowReact");
 
 app.UseAuthentication();
