@@ -17,7 +17,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReact",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000")
+            policy.WithOrigins(
+            "http://localhost:3000",
+            "https://parking-slot-monitoring-system-v2.vercel.app"
+        )
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
