@@ -39,7 +39,7 @@ public class ReservationServiceTests
         // Act
         var result = controller.ReserveSlot(1, 100);
 
-        // Assert
+        // Assertd
         result.Should().BeOfType<OkObjectResult>();
 
         var slot = context.ParkingSlots.FirstOrDefault(s => s.slot_id == 1);
