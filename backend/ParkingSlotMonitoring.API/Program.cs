@@ -56,11 +56,9 @@ builder.WebHost.UseUrls("http://0.0.0.0:10000");
 var app = builder.Build();
 
 // ================= DEV TOOLS =================
-if (app.Environment.IsDevelopment())
-{
+
     app.MapOpenApi();             // JSON spec
     app.MapScalarApiReference();  // UI → /scalar/v1
-}
 
 // ================= MIDDLEWARE =================
 //app.UseHttpsRedirection();
