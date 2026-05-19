@@ -1,5 +1,3 @@
-import { QRCodeCanvas } from "qrcode.react";
-
 function ParkingGrid({
     slots,
     reserve,
