@@ -61,7 +61,7 @@ var app = builder.Build();
     app.MapScalarApiReference();  // UI → /scalar/v1
 
 // ================= MIDDLEWARE =================
-//app.UseHttpsRedirection();
+//app.UseHttpsRedirection();git add .
 app.UseCors("AllowReact");
 
 app.UseAuthentication();
