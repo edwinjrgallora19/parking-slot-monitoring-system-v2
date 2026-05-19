@@ -51,6 +51,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi(); // .NET 10 native OpenAPI
+builder.WebHost.UseUrls("http://0.0.0.0:10000");
 
 var app = builder.Build();
 
@@ -62,7 +63,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // ================= MIDDLEWARE =================
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseCors("AllowReact");
 
 app.UseAuthentication();
